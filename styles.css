@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light dark;
+  --ink: #241f2e;
+  --paper: #fff7df;
+  --paper-dark: #f0ddb4;
+  --blue: #3f6fb5;
+  --gold: #d9912b;
+  --pitch: #265b30;
+  --muted: #655d6d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper-dark);
+  color: var(--ink);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+main {
+  width: min(760px, calc(100% - 32px));
+  margin: 32px auto;
+  border: 3px solid var(--ink);
+  border-bottom-width: 7px;
+  background: var(--paper);
+  padding: clamp(24px, 6vw, 56px);
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+h2 {
+  margin-top: 2.25rem;
+  font-size: 1.2rem;
+}
+
+p,
+li {
+  max-width: 68ch;
+}
+
+a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+a:focus-visible {
+  outline: 4px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--pitch);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lede {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.actions {
+  display: grid;
+  gap: 14px;
+  margin: 32px 0;
+}
+
+.button {
+  display: block;
+  border: 3px solid var(--ink);
+  border-bottom-width: 6px;
+  background: var(--blue);
+  color: white;
+  padding: 14px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button.secondary {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.note {
+  border: 2px solid var(--pitch);
+  background: #e4f1d8;
+  padding: 14px 16px;
+}
+
+footer {
+  margin-top: 42px;
+  border-top: 2px solid var(--ink);
+  padding-top: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f7efd9;
+    --paper: #17131e;
+    --paper-dark: #0d0b11;
+    --blue: #8cb8ff;
+    --gold: #ffc45f;
+    --pitch: #94d69b;
+    --muted: #c8bccd;
+  }
+
+  .button {
+    color: #17131e;
+  }
+
+  .button.secondary {
+    color: var(--ink);
+  }
+
+  .note {
+    background: #14251a;
+  }
+}
